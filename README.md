@@ -69,7 +69,7 @@ spring.h2.console.enabled=true
 
 ## Implement Transactions
 
-To implement transactions in our Spring Boot application, we will be using Spring Data JPA. Spring Data JPA provides a @Transactional annotation that we can use to declare the transaction boundaries. When a method is annotated with @Transactional, Spring will start a transaction before the method is executed and commit the transaction after the method completes. If the method throws an exception, Spring will automatically rollback the transaction.
+To implement transactions in our Spring Boot application, we will be using **Spring Data JPA**. Spring Data JPA provides a `@Transactional` annotation that we can use to declare the transaction boundaries. When a method is annotated with `@Transactional`, Spring will start a transaction before the method is executed and commit the transaction after the method completes. If the method throws an exception, Spring will automatically rollback the transaction.
 In the context of Spring managing transactions involves starting, committing, and rolling back transactions as needed. This is crucial for maintaining data integrity and consistency in applications, particularly in scenarios where multiple operations need to be executed as a single, cohesive unit.
 Let's consider a simple banking scenario where you need to transfer money from one account to another. In this case, you want to ensure that both the withdrawal from the source account and the deposit into the destination account occur atomically as a single transaction.
 
@@ -97,7 +97,7 @@ public class TransferService {
 }
 ```
 
-The `transfer` method is annotated with `@Transactional`, which means t the entire transfer method will be executed within a transaction. Within the `transfer` method, we call the `withdraw` method to decrease the balance of the `fromAccount`, and then we call the `deposit` method to increase the balance of the toAccount. If either of these methods throws an exception, the entire transaction will be rolled back.
+The `transfer` method is annotated with `@Transactional`, which means t the entire transfer method will be executed within a transaction. Within the `transfer` method, we call the `withdraw` method to decrease the balance of the `fromAccount`, and then we call the `deposit` method to increase the balance of the `toAccount`. If either of these methods throws an exception, the entire transaction will be rolled back.
 
 That’s it! With just a few lines of code, we have implemented transactions in our Spring Boot application using Spring Data JPA.
 
@@ -236,6 +236,31 @@ We can then update our `updateUserEmail` method in `UserServiceclass` to call th
 
 By following these best practices, you can ensure that your transactions are implemented efficiently, safely, and effectively in your Spring Boot application using Spring Data JPA.
 
+## Getting Started
+
+### Prerequisites
+
+- Java 17
+- Maven
+
+### Installation
+
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/HamidIdifi/spring-transaction-demo.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd spring-transaction-demo
+  ```
+3. Build the project:
+  ```bash
+  mvn clean install
+  ```
+4. Run the application:
+  ```bash
+  mvn spring-boot:run
+  ```
 ## Usage
 
 The application exposes one endpoint:
