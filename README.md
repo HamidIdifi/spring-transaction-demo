@@ -21,31 +21,6 @@ The key properties of a transaction are often referred to as the **ACID** proper
 
 Spring Boot supports both programmatic and declarative transaction management. In programmatic transaction management, the developer has to manually define the transaction boundaries and manage the transaction programmatically. In declarative transaction management, the transaction management is handled by the container, and the developer only has to define the transactional boundaries using annotations.
 
-## Getting Started
-
-### Prerequisites
-
-- Java 17
-- Maven
-
-### Installation
-
-1. Clone the repository:
-  ```bash
-  git clone https://github.com/HamidIdifi/spring-transaction-demo.git
-  ```
-2. Navigate to the project directory:
-  ```bash
-  cd spring-transaction-demo
-  ```
-3. Build the project:
-  ```bash
-  mvn clean install
-  ```
-4. Run the application:
-  ```bash
-  mvn spring-boot:run
-  ```
 ## Dependencies
 
 We can use the Spring Initializr to generate a new Spring Boot project with the following dependencies for our project:
